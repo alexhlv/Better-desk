@@ -1,0 +1,31 @@
+@import '../mixins';
+
+.subscribe {
+    background-color: #3DBDB6;
+    border: 1px solid #E1E1E1;
+    @include flex-container(center, center);
+    flex-direction: column;
+
+    &__title {
+        font-size: 40px;
+        line-height: 47px;
+        // @extend %text-center;
+        @extend %text-white;
+        padding-top: 80px;
+        padding-bottom: 48px;
+    }
+}
+
+.subscribe-form_reverse {
+    margin-bottom: 80px;
+}
+
+.subscribe-form__field_turquoise {
+    background-color: rgba(61, 189, 182, 0.2);
+    border: 1px solid #fff;
+}
+
+.subscribe-form__btn_white {
+    background-color: #fff;
+    color: #3DBDB6;
+}

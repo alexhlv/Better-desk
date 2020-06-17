@@ -1,0 +1,140 @@
+@import '../mixins';
+
+.todolist {
+    max-width: 521px;
+    min-height: 461px;
+
+    &__title-block {
+        width: 521px;
+        height: 70px;
+        background: #F5F9FC;
+        @include flex-container(space-between, center);
+        padding-right: 40px;
+        padding-left: 35px;
+    }
+    
+    &__title-item {
+        @include flex-container(space-between, center);
+    }
+    
+    &__headline {
+        font-family: 'Open Sans';
+        font-size: 20px;
+        line-height: 27px;
+        color: #3D4D65;
+        padding-right: 10px;
+    }
+    
+    &__headline-text {
+        width: 51px;
+        height: 32px;
+        line-height: 32px;
+        color: #fff;
+        background-color: #20BBEF;
+        border-radius: 40px;
+        text-align: center;
+    }
+
+    @import '../buttons/headline-button';
+
+    &__manager {
+        background-color: #fff;
+        padding-top: 28px;
+        padding-bottom: 38px;
+    }
+
+    &__element {
+        position: relative;
+
+        &:first-child::before {
+            content: '';
+            display: block;
+            width: 7px;
+            height: 195px;
+            position: absolute;
+            left: 505px;
+            top: 0px;
+            background-color: #E9EDF2;
+            border-radius: 5px;
+        }
+    }
+
+    &__task-checkbox {
+        padding-left: 75px;
+        padding-bottom: 70px;
+    }
+
+    &__task-checkbox label {
+        position: relative;
+    }
+
+    [type="checkbox"] {
+        display: none;
+
+        &:checked ~ .task {
+            border: 2px solid #dadfE5;
+    
+            .task__checked {
+                display: block;
+                position: absolute;
+                top: 6px;
+                left: 6px;
+            }
+
+            .task__date, .task__description {
+                color: #dadfE5;
+                text-decoration-line: line-through;
+            }
+
+            & div {
+                background-color: #dadfE5;
+            }    
+            
+        }
+    }
+    
+    .task {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid #20BBEF;
+        margin-bottom: 70px;
+        position: absolute;
+        top: 10px;
+        left: 390px;
+
+        .task__checked {
+            display: none;
+        }
+
+        &__date {
+            width: 93px;
+            font-family: 'Open Sans';
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 25px;
+            color: #54657E;
+            position: relative;
+            top: -10px;
+            right: 400px;
+        }
+        
+        &__description {
+            width: 344px;
+            font-family: 'Open Sans';
+            font-size: 16px;
+            line-height: 22px;
+            color: #606D78;
+            position: relative;
+            top: -10px;
+            right: 400px;
+        }
+    }  
+}
+
+.todolist .todolist__task:last-child [type="checkbox"] ~ .task div > div {
+    display: none;
+}
+
+@import '../betterdesk/timeline';

@@ -1,0 +1,28 @@
+@import '../mixins';
+
+$container-width: 1121px;
+
+.clients {
+    &__block {
+        width: $container-width;
+        margin: 0 auto;
+        padding-top: 42px;
+        padding-bottom: 40px;
+        @include flex-container(space-between, center);
+    }
+
+    &__item {
+        @include flex-container(space-between, center);
+    }
+    
+    &__photo {
+        margin-right: 23px;
+    }
+    
+    &__name {
+        font-size: 18px;
+        line-height: 21px;
+        color: #39394D;
+        padding-bottom: 12px;
+    }
+}

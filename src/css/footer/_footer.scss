@@ -1,0 +1,79 @@
+@import '../mixins';
+
+.footer {
+    background-color: #1F2532;
+
+    $container-width: 683px;
+
+    &__block {
+        @include flex-container(space-between, flex-start);
+        width: $container-width;
+        padding-top: 72px;
+        padding-bottom: 32px;
+        margin: 0 auto;  
+    }
+
+    &__item {
+
+    }
+    
+    &__logo {
+        @include flex-container(flex-start, center);
+        padding-bottom: 15px;
+    }
+
+    &__developer {
+        font-style: italic;
+        font-size: 12px;
+        line-height: 19px;
+        @extend %text-white;
+        opacity: 0.6;
+    }
+
+    &__title {
+        font-size: 13px;
+        line-height: 14px;
+    }
+
+    &__title a {
+        @extend %text-white;
+        text-decoration: none;
+    }
+
+    &__nav {
+        padding-top: 18px;
+    }
+
+    &__nav-item {
+        font-style: italic;
+        font-size: 12px;
+        line-height: 28px;    
+        opacity: 0.6;
+        padding-bottom: 5px;
+    }
+
+    &__nav-item a {
+        @extend %text-white;
+        text-decoration: none;
+    }
+
+    &__social-icon {
+
+    }
+}
+
+.gratitude {
+    background-color: #3e3e58;
+    padding-top: 36px;
+    padding-bottom: 32px;
+    margin: 0 auto; 
+
+    &__text {
+        font-style: italic;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: center;
+        @extend %text-center;
+        @extend %text-white;  
+    }
+}

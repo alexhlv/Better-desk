@@ -1,0 +1,10 @@
+@import '../mixins';
+
+.learn-more-link {
+    font-style: italic;;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2D8CFF;
+    @extend %no-decoration-link;
+    margin-bottom: 80px;
+}

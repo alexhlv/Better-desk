@@ -1,0 +1,77 @@
+@import '../mixins';
+
+.features {
+    width: 764px;
+    background-color: #fff; 
+    padding: 60px 0;
+    margin: 0 auto;
+      
+
+    &__block {
+        @include flex-container-column;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 44px;
+        letter-spacing: 0.2px;
+        color: #333333;
+        text-align: center;
+        margin-bottom: 39px;
+    }
+
+    &__title span {
+        font-style: italic;
+    }
+
+    &__content-block {
+        @include flex-container(space-between, center);
+        text-align: center;
+    }
+        
+    &__logo {
+        width: 99px;
+        height: 99px;
+        border-radius: 50%;
+        @include flex-container(center, center);
+        margin-left: calc(50% - 50px);
+        margin-bottom: 14px;
+
+        $blue: linear-gradient(131.99deg, #3DBDB6 5.64%, #0089CE 100%);
+        $violet: linear-gradient(308.7deg, #7A86CC 8.85%, #9FACF8 100%);
+        $pink: linear-gradient(180deg, #F3778F 0%, #F26A95 44.25%, #F15A9D 100%);
+
+        &_blue {
+            background: $blue;
+        }
+        
+        &_violet {
+            background: $violet;
+        }
+        
+        &_pink {
+            background: $pink;
+        }            
+            
+    }
+
+    &__content-title {
+        font-style: italic;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.4px;
+        color: #333333;
+        margin-bottom: 5px;
+    }
+
+    &__content-text {
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.2px;
+        color: #72808E;
+        margin-bottom: 5px;
+    }
+
+    @import '../links/learn-more';
+}

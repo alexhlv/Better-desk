@@ -1,0 +1,25 @@
+@import '../mixins';
+
+.banner {
+    padding-bottom: 150px;
+
+    background: {
+        image: url('../images/people.png'), url('../images/bg.jpg');
+        size: 715px 511px, cover;
+        repeat: no-repeat;
+        position: calc(100% - 50px) calc(100% + 75px), center center;
+    }
+
+    &__content {
+        @extend %container;
+        margin-bottom: 138px;
+    }
+
+    &__title {
+        color: #ffffff;
+        font-size: 48px;
+        line-height: 1.2;
+        letter-spacing: -2.12px;
+        padding: 110px 0 47px;
+    }
+}

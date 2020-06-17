@@ -1,0 +1,22 @@
+@import '../mixins';
+
+.logos {
+    height: 105px;
+    background: #F9FAFA;
+    border: 1px solid #EEEEEE;
+
+    &__block {
+        height: 29px;
+        @include flex-container(center, center);
+        padding-top: 50px;
+        padding-bottom: 37px;
+
+        & img {
+            height: 29px;
+        }
+
+        a + a {
+            margin-left: 40px;
+        }
+    }
+}

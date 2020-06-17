@@ -1,0 +1,903 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Open+Sans:wght@300;400;600&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'ABeeZee', 'Open Sans', sans-serif; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.header {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header__text {
+    font-size: 16px;
+    line-height: .9;
+    color: #FFFFFF;
+    padding: 4px 10px; }
+  .header__logo {
+    display: flex; }
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  .nav__link a {
+    display: block;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #FFFFFF;
+    position: relative; }
+    .nav__link a:hover::after {
+      background-color: #3DBDB6; }
+    .nav__link a:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: calc(100% + 26px);
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background-color: transparent; }
+  .nav__link--bordered a {
+    padding: 9px 18px;
+    border: 1px solid #979797;
+    border-radius: 4px; }
+    .nav__link--bordered a:hover {
+      border-color: #3DBDB6;
+      color: #3DBDB6; }
+    .nav__link--bordered a::after {
+      display: none; }
+
+.logo {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background: #3DBDB6;
+  border-radius: 9px; }
+  .logo::before, .logo::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 28%;
+    border-radius: 50%; }
+  .logo::before {
+    left: 32%; }
+  .logo::after {
+    left: 60%; }
+  .logo span {
+    position: absolute;
+    background-color: #fff;
+    width: 25px;
+    height: 12.5px;
+    border-radius: 50%;
+    top: 52%;
+    left: 50%;
+    margin-left: -12.5px; }
+    .logo span::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 55%;
+      top: 0;
+      left: 0;
+      background-color: #3DBDB6; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.banner {
+  padding-bottom: 150px;
+  background-image: url("../images/people.png"), url("../images/bg.jpg");
+  background-size: 715px 511px, cover;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 50px) calc(100% + 75px), center center; }
+  .banner__content {
+    margin-bottom: 138px; }
+  .banner__title {
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -2.12px;
+    padding: 110px 0 47px; }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #FFFFFF; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #FFFFFF; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #FFFFFF; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #FFFFFF; }
+
+.subscribe-form {
+  display: inline-flex;
+  box-shadow: 0px 0px 8px rgba(177, 177, 177, 0.5);
+  border-radius: 3px;
+  overflow: hidden; }
+  .subscribe-form__field {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 16px 20px;
+    line-height: 20px;
+    border: none;
+    width: 300px; }
+  .subscribe-form__btn {
+    background-color: #3DBDB6;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -0.32px;
+    color: #FFFFFF;
+    padding: 16px 20px;
+    border: none; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.logos {
+  height: 105px;
+  background: #F9FAFA;
+  border: 1px solid #EEEEEE; }
+  .logos__block {
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 37px; }
+    .logos__block img {
+      height: 29px; }
+    .logos__block a + a {
+      margin-left: 40px; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.features {
+  width: 764px;
+  background-color: #fff;
+  padding: 60px 0;
+  margin: 0 auto;
+  /* flex-items */ }
+  .features__block {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; }
+  .features__title {
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0.2px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 39px; }
+  .features__title span {
+    font-style: italic; }
+  .features__content-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; }
+  .features__logo {
+    width: 99px;
+    height: 99px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: calc(50% - 50px);
+    margin-bottom: 14px; }
+    .features__logo_blue {
+      background: linear-gradient(131.99deg, #3DBDB6 5.64%, #0089CE 100%); }
+    .features__logo_violet {
+      background: linear-gradient(308.7deg, #7A86CC 8.85%, #9FACF8 100%); }
+    .features__logo_pink {
+      background: linear-gradient(180deg, #F3778F 0%, #F26A95 44.25%, #F15A9D 100%); }
+  .features__content-title {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.4px;
+    color: #333333;
+    margin-bottom: 5px; }
+  .features__content-text {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    color: #72808E;
+    margin-bottom: 5px; }
+  .features .header, .features .banner__content, .features .about-us, .features .award__block {
+    max-width: 1100px;
+    margin: 0 auto; }
+  .features .nav__link a, .nav__link .features a, .features .about-us .learn-more-link .learn-more-link, .about-us .learn-more-link .features .learn-more-link, .features .learn-more-link {
+    text-decoration: none; }
+  .features .betterdesk__title, .features .betterdesk__info, .features .about-us__items, .features .testimonial__praise marquee, .testimonial__praise .features marquee, .features .gratitude__text {
+    text-align: center; }
+  .features .betterdesk__title, .features .betterdesk__info, .features .betterdesk__service-title, .features .betterdesk__service-description, .features .award__description, .features .award__link, .features .testimonial__praise, .features .testimonial__identifier, .features .subscribe__title, .features .footer__developer, .features .footer__title a, .footer__title .features a, .features .footer__nav-item a, .footer__nav-item .features a, .features .gratitude__text {
+    color: #fff; }
+  .features .betterdesk__item {
+    font-size: 14px;
+    line-height: 20px; }
+  .features .learn-more-link {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2D8CFF;
+    margin-bottom: 80px; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.betterdesk {
+  background: linear-gradient(147.56deg, #3DBDB6 5.64%, #0089CE 100%);
+  padding-top: 80px;
+  padding-bottom: 90px; }
+  .betterdesk__title {
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 60px; }
+  .betterdesk__info {
+    max-width: 1113px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0 2px;
+    margin-bottom: 60px; }
+  .betterdesk__block {
+    max-width: 1113px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .betterdesk__item {
+    font-size: 20px; }
+    .betterdesk__item_dark-blue {
+      color: #0B5E6E;
+      padding-top: 25px;
+      padding-right: 26px;
+      padding-bottom: 0;
+      padding-left: 33px; }
+  .betterdesk__service {
+    max-width: 502px;
+    min-height: 164px;
+    background: rgba(24, 144, 164, 0.5);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+    border-radius: 3px; }
+  .betterdesk__service-title {
+    font-size: 20px;
+    line-height: 56px;
+    padding-top: 15px;
+    padding-right: 26px;
+    padding-bottom: 10px;
+    padding-left: 33px; }
+  .betterdesk__service-description {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 0;
+    padding-right: 26px;
+    padding-bottom: 0;
+    padding-left: 33px; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.todolist {
+  max-width: 521px;
+  min-height: 461px; }
+  .todolist__title-block {
+    width: 521px;
+    height: 70px;
+    background: #F5F9FC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 35px; }
+  .todolist__title-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .todolist__headline {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    line-height: 27px;
+    color: #3D4D65;
+    padding-right: 10px; }
+  .todolist__headline-text {
+    width: 51px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    background-color: #20BBEF;
+    border-radius: 40px;
+    text-align: center; }
+  .todolist .todolist__headline-button {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    width: 90px;
+    height: 40px;
+    background: #20BBEF;
+    color: #fff;
+    border: 1px solid #DADFE5;
+    border-radius: 5px; }
+  .todolist__manager {
+    background-color: #fff;
+    padding-top: 28px;
+    padding-bottom: 38px; }
+  .todolist__element {
+    position: relative; }
+    .todolist__element:first-child::before {
+      content: '';
+      display: block;
+      width: 7px;
+      height: 195px;
+      position: absolute;
+      left: 505px;
+      top: 0px;
+      background-color: #E9EDF2;
+      border-radius: 5px; }
+  .todolist__task-checkbox {
+    padding-left: 75px;
+    padding-bottom: 70px; }
+  .todolist__task-checkbox label {
+    position: relative; }
+  .todolist [type="checkbox"] {
+    display: none; }
+    .todolist [type="checkbox"]:checked ~ .task {
+      border: 2px solid #dadfE5; }
+      .todolist [type="checkbox"]:checked ~ .task .task__checked {
+        display: block;
+        position: absolute;
+        top: 6px;
+        left: 6px; }
+      .todolist [type="checkbox"]:checked ~ .task .task__date, .todolist [type="checkbox"]:checked ~ .task .task__description {
+        color: #dadfE5;
+        text-decoration-line: line-through; }
+      .todolist [type="checkbox"]:checked ~ .task div {
+        background-color: #dadfE5; }
+  .todolist .task {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #20BBEF;
+    margin-bottom: 70px;
+    position: absolute;
+    top: 10px;
+    left: 390px; }
+    .todolist .task .task__checked {
+      display: none; }
+    .todolist .task__date {
+      width: 93px;
+      font-family: 'Open Sans';
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 25px;
+      color: #54657E;
+      position: relative;
+      top: -10px;
+      right: 400px; }
+    .todolist .task__description {
+      width: 344px;
+      font-family: 'Open Sans';
+      font-size: 16px;
+      line-height: 22px;
+      color: #606D78;
+      position: relative;
+      top: -10px;
+      right: 400px; }
+
+.todolist .todolist__task:last-child [type="checkbox"] ~ .task div > div {
+  display: none; }
+
+.task__timeline {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: red;
+  position: absolute;
+  top: -5px;
+  right: 450px; }
+  .task__timeline_red, .task__timeline_red div {
+    background-color: #f5474a; }
+  .task__timeline_orange, .task__timeline_orange div {
+    background-color: #f38428; }
+  .task__timeline_blue, .task__timeline_blue div {
+    background-color: #20bbef; }
+  .task__timeline div {
+    width: 1px;
+    min-height: 55px;
+    margin-left: 6.5px;
+    position: absolute;
+    top: 15px;
+    left: 0; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.about-us__title {
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  color: #4A4A4A;
+  margin-top: 80px;
+  margin-bottom: 71px; }
+.about-us__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 80px; }
+.about-us__img {
+  width: 350px;
+  height: 280px; }
+.about-us__text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #39394D;
+  margin-top: 31px;
+  margin-bottom: 25px; }
+.about-us .learn-more-link {
+  /* flex-items */ }
+  .about-us .learn-more-link .header, .about-us .learn-more-link .banner__content, .about-us .learn-more-link .about-us, .about-us .learn-more-link .award__block {
+    max-width: 1100px;
+    margin: 0 auto; }
+  .about-us .learn-more-link .nav__link a, .nav__link .about-us .learn-more-link a, .about-us .learn-more-link .learn-more-link {
+    text-decoration: none; }
+  .about-us .learn-more-link .betterdesk__title, .about-us .learn-more-link .betterdesk__info, .about-us .learn-more-link .about-us__items, .about-us .learn-more-link .testimonial__praise marquee, .testimonial__praise .about-us .learn-more-link marquee, .about-us .learn-more-link .gratitude__text {
+    text-align: center; }
+  .about-us .learn-more-link .betterdesk__title, .about-us .learn-more-link .betterdesk__info, .about-us .learn-more-link .betterdesk__service-title, .about-us .learn-more-link .betterdesk__service-description, .about-us .learn-more-link .award__description, .about-us .learn-more-link .award__link, .about-us .learn-more-link .testimonial__praise, .about-us .learn-more-link .testimonial__identifier, .about-us .learn-more-link .subscribe__title, .about-us .learn-more-link .footer__developer, .about-us .learn-more-link .footer__title a, .footer__title .about-us .learn-more-link a, .about-us .learn-more-link .footer__nav-item a, .footer__nav-item .about-us .learn-more-link a, .about-us .learn-more-link .gratitude__text {
+    color: #fff; }
+  .about-us .learn-more-link .betterdesk__item {
+    font-size: 14px;
+    line-height: 20px; }
+  .about-us .learn-more-link .learn-more-link {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 17px;
+    color: #2D8CFF;
+    margin-bottom: 80px; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.learn-more-link {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2D8CFF;
+  margin-bottom: 80px; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.award {
+  background: linear-gradient(173.7deg, #1172D0 6.2%, #1D98D6 99.82%);
+  border: 1px solid #E1E1E1; }
+  .award__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  .award__description {
+    font-style: italic;
+    font-size: 28px;
+    line-height: 33px;
+    padding-bottom: 18px; }
+  .award__link {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration-line: underline; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.testimonial__video-bg {
+  height: 100vh;
+  width: 1440px;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+.testimonial__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; }
+.testimonial__effects {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); }
+.testimonial__content {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 300px; }
+.testimonial__praise {
+  font-style: italic;
+  font-size: 40px;
+  line-height: 43px; }
+.testimonial__praise marquee {
+  behavior: scroll; }
+.testimonial__identifier {
+  font-family: 'Open Sans';
+  font-size: 18px;
+  line-height: 25px;
+  padding-top: 20px;
+  padding-bottom: 40px; }
+.testimonial__video-button {
+  padding-bottom: 78px; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.clients__block {
+  width: 1121px;
+  margin: 0 auto;
+  padding-top: 42px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.clients__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.clients__photo {
+  margin-right: 23px; }
+.clients__name {
+  font-size: 18px;
+  line-height: 21px;
+  color: #39394D;
+  padding-bottom: 12px; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.subscribe {
+  background-color: #3DBDB6;
+  border: 1px solid #E1E1E1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .subscribe__title {
+    font-size: 40px;
+    line-height: 47px;
+    padding-top: 80px;
+    padding-bottom: 48px; }
+
+.subscribe-form_reverse {
+  margin-bottom: 80px; }
+
+.subscribe-form__field_turquoise {
+  background-color: rgba(61, 189, 182, 0.2);
+  border: 1px solid #fff; }
+
+.subscribe-form__btn_white {
+  background-color: #fff;
+  color: #3DBDB6; }
+
+.header, .banner__content, .about-us, .award__block {
+  max-width: 1100px;
+  margin: 0 auto; }
+
+.nav__link a, .features .learn-more-link, .about-us .learn-more-link .learn-more-link, .learn-more-link {
+  text-decoration: none; }
+
+.betterdesk__title, .betterdesk__info, .about-us__items, .testimonial__praise marquee, .gratitude__text {
+  text-align: center; }
+
+.betterdesk__title, .betterdesk__info, .betterdesk__service-title, .betterdesk__service-description, .award__description, .award__link, .testimonial__praise, .testimonial__identifier, .subscribe__title, .footer__developer, .footer__title a, .footer__nav-item a, .gratitude__text {
+  color: #fff; }
+
+.betterdesk__item {
+  font-size: 14px;
+  line-height: 20px; }
+
+/* flex-items */
+.footer {
+  background-color: #1F2532; }
+  .footer__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 683px;
+    padding-top: 72px;
+    padding-bottom: 32px;
+    margin: 0 auto; }
+  .footer__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 15px; }
+  .footer__developer {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 19px;
+    opacity: 0.6; }
+  .footer__title {
+    font-size: 13px;
+    line-height: 14px; }
+  .footer__title a {
+    text-decoration: none; }
+  .footer__nav {
+    padding-top: 18px; }
+  .footer__nav-item {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 28px;
+    opacity: 0.6;
+    padding-bottom: 5px; }
+  .footer__nav-item a {
+    text-decoration: none; }
+
+.gratitude {
+  background-color: #3e3e58;
+  padding-top: 36px;
+  padding-bottom: 32px;
+  margin: 0 auto; }
+  .gratitude__text {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

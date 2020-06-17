@@ -1,0 +1,37 @@
+@import '../mixins';
+
+.award {
+    background: linear-gradient(173.7deg, #1172D0 6.2%, #1D98D6 99.82%);
+    border: 1px solid #E1E1E1;
+
+    &__block {
+        @extend %container;
+        @include flex-container(space-between, center);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    // &__item {
+
+    // }
+    
+    &__description {
+        font-style: italic;
+        font-size: 28px;
+        line-height: 33px;
+        @extend %text-white;
+        padding-bottom: 18px;
+    }
+    
+    &__link {
+        font-style: italic;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration-line: underline;
+        @extend %text-white;
+    }
+}
+
+// .trademark {
+//     color: red;
+// }

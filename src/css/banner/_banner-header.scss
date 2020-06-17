@@ -1,0 +1,69 @@
+@import '../mixins';
+
+.header {
+    height: 72px;
+
+    @extend %container;
+    @include flex-container(space-between, center);
+
+    &__text {
+        font-size: 16px;
+        line-height: .9;
+        color: #FFFFFF;
+        padding: 4px 10px;
+    }
+
+    &__logo {
+        display: flex;
+    }
+}
+
+.nav {
+    @include flex-container(flex-end, center);
+
+    &__link {
+        $link-hover: #3DBDB6;
+
+        a { 
+            @extend %no-decoration-link;
+            display: block;
+            padding: 0 15px;
+            font-size: 14px;
+            color: #FFFFFF;
+            position: relative;
+
+            &:hover::after {
+                background-color: $link-hover;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: calc(100% + 26px);
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 4px;
+                background-color: transparent;
+            }
+        }
+
+        &--bordered {
+            a {
+                padding: 9px 18px;
+                border: 1px solid #979797;
+                border-radius: 4px;
+
+                &:hover {
+                    border-color: $link-hover;
+                    color: $link-hover;;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

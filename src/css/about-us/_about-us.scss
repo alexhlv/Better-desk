@@ -1,0 +1,44 @@
+@import '../mixins';
+
+.about-us {
+    @extend %container;
+
+    &__title {
+        font-size: 40px;
+        line-height: 47px;
+        text-align: center;
+        color: #4A4A4A;
+        margin-top: 80px;
+        margin-bottom: 71px;
+    }
+
+    &__block {
+        @include flex-container(space-between, center);
+        padding-bottom: 80px;
+    }
+    
+    &__items {
+        @extend %text-center;
+    }
+
+    &__img {
+        width: 350px;
+        height: 280px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 21px;
+        color: #39394D;
+        margin-top: 31px;
+        margin-bottom: 25px;
+    }
+
+    .learn-more-link {
+        @import '../links/learn-more';
+    }
+
+    
+}
+
+@import '../links/learn-more';

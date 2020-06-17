@@ -1,0 +1,36 @@
+.task__timeline {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    // background-color: blue;
+    color: red;
+    position: absolute;
+    top: -5px;
+    right: 450px;
+
+    $red: #f5474a;
+    $orange: #f38428;
+    $blue: #20bbef;
+
+    &_red, &_red div {
+        background-color: $red;
+    }
+    
+    &_orange, &_orange div {
+        background-color: $orange;
+    }
+    
+    &_blue, &_blue div {
+        background-color: $blue;
+    }
+
+    & div {
+        width: 1px;
+        min-height: 55px;
+        margin-left: 6.5px;
+        position: absolute;
+        top: 15px;
+        left: 0;
+
+    }
+}
